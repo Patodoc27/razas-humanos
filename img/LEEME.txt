@@ -1,0 +1,31 @@
+Carpeta de imágenes de la cápsula "Perros con razas, humanos sin ellas"
+==================================
+
+Ya vienen incluidas las 9 imágenes (IMG-01 a IMG-09), generadas en un estilo
+ilustrado coherente con el diseño de la cápsula.
+
+Cada espacio busca el archivo en este orden: .webp → .png → .jpg
+Por eso cada imagen está en dos formatos: .webp (liviano, lo usan los
+navegadores modernos) y .jpg (respaldo para navegadores más viejos).
+
+Si querés reemplazar alguna imagen por una propia, guardala en esta carpeta
+con el mismo nombre, por ejemplo IMG-04.webp o IMG-04.jpg.
+
+En el modo docente (engranaje abajo a la derecha, PIN 2026), cada espacio
+muestra el prompt con el que se generó y un botón "Copiar prompt", y podés
+arrastrar una imagen sobre el espacio para previsualizarla sin guardar nada.
+
+Espacios:
+  IMG-01  Portada — fila de perros vs fila de personas, Tomás y Julieta en el medio
+  IMG-02  Carpeta 1 — dos estudiantes en el recreo con un celular
+  IMG-03  Carpeta 2 — carpeta con árbol genealógico de perros y candado
+  IMG-04  Carpeta 2 — perros mestizos caminando por un pueblo andino
+  IMG-05  Carpeta 3 — mueble de museo con cajones vacíos sin etiquetas
+  IMG-06  Carpeta 5 — globo con bandas de intensidad de luz solar
+  IMG-07  Carpeta 6 — delta de río visto desde arriba (red de canales)
+  IMG-08  Carpeta 8 — paisaje de la Puna con salar, volcanes y llamas
+  IMG-09  Carpeta 10 — ratón en salar entre montañas / pájaro entre valles
+
+Las 9 imágenes también están incrustadas dentro de index.html: si el archivo
+se abre sin esta carpeta al lado, las imágenes se ven igual. Si guardás acá
+una imagen con el mismo nombre, esa tiene prioridad.
