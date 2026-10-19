@@ -1703,7 +1703,8 @@ function cargar(){
 }
 
 /* ---------- Navegación ---------- */
-function carpetaAbierta(n){ return n===0 || modoDocente || state.completadas.indexOf(n-1)!==-1; }
+var CARPETAS_LIBRES = true; /* true: todas las carpetas abren sin completar actividades (modo compartir con colegas); false: vuelven los candados secuenciales */
+function carpetaAbierta(n){ return CARPETAS_LIBRES || n===0 || modoDocente || state.completadas.indexOf(n-1)!==-1; }
 
 function renderRail(){
   var rail = $("rail"); rail.innerHTML = "";
