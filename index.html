@@ -309,6 +309,15 @@ body.tema-claro .slot-img .slot-prompt{background:#fff;color:#211C4D;}
 .slot-img figcaption{font-size:13px;opacity:.7;margin-top:6px;text-align:center;}
 .slot-img.slot-preview{border:2px solid var(--turquesa);}
 
+/* ---------- Diálogo con imagen al costado ---------- */
+.dialogo-fila{display:flex;gap:20px;align-items:stretch;margin:16px 0;}
+.dialogo-fila .slot-img{flex:0 0 300px;margin:0;align-self:flex-start;}
+.dialogo-fila .tarjeta-lectura{flex:1 1 auto;min-width:0;margin-top:0;}
+@media (max-width:900px){
+  .dialogo-fila{flex-direction:column;gap:14px;}
+  .dialogo-fila .slot-img{flex:none;align-self:center;}
+}
+
 /* ---------- Clasificar (drag & drop) ---------- */
 .sortable .pool,.sortable .caja{
   border:2px dashed var(--borde-suave);border-radius:14px;padding:12px;min-height:70px;
@@ -864,6 +873,8 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
     <div class="carpeta-cuerpo">
       <div class="carpeta-encabezado"><span class="carpeta-num">Carpeta N° 1</span><h2 class="carpeta-titulo" id="tit-1">El debate</h2></div>
 
+      <div class="dialogo-fila">
+      <figure class="slot-img" data-slot="IMG-02" data-ratio="3/4"><div class="slot-media"></div><figcaption class="slot-cap"></figcaption></figure>
       <div class="tarjeta-lectura dialogo">
         <p class="burbuja narrador">En el recreo, Tomás muestra en el celular un video de una exposición de perros. En la pantalla aparecen un chihuahua y un gran danés, uno al lado del otro.</p>
         <p class="burbuja tomas">—Fijate esto —le dice a Julieta—. Son la misma especie y son re distintos. Si hay razas de perros, también hay razas de personas. Es biología.</p>
@@ -871,8 +882,7 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
         <p class="burbuja tomas">—¿Por qué no? Somos animales, igual que ellos.</p>
         <p class="burbuja narrador">Julieta se queda pensando. Siente que algo no cierra, pero no sabe explicar qué. Esa tarde decide investigarlo.</p>
       </div>
-
-      <figure class="slot-img" data-slot="IMG-02" data-ratio="3/4"><div class="slot-media"></div><figcaption class="slot-cap"></figcaption></figure>
+      </div>
 
       <div class="tarjeta-actividad" data-act="a1_1">
         <div class="act-head"><span class="act-tag">Actividad 1.1</span><span class="act-ico" aria-hidden="true" data-ico="urna"></span></div>
@@ -915,7 +925,7 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
 
       <div class="tarjeta-lectura">
         <h4>Una sola especie</h4>
-        <p>Un chihuahua y un gran danés pertenecen a la misma especie. Una <span class="termino">especie</span> es un grupo de seres vivos que pueden cruzarse entre sí y tener crías que, a su vez, también pueden tener crías. Entonces, ¿qué hace que sean razas distintas?</p>
+        <p>Un chihuahua y un gran danés pertenecen a la misma especie. En los animales que se reproducen sexualmente, una de las definiciones más usadas dice que una <span class="termino">especie</span> es un grupo de seres vivos que pueden cruzarse entre sí y tener crías que, a su vez, también pueden tener crías. Entonces, ¿qué hace que sean razas distintas?</p>
         <h4>De qué perros hablamos</h4>
         <p>En esta cápsula, cuando decimos "raza de perro" hablamos siempre de los <strong>perros de criadero</strong>: los que se inscriben en el registro de un club o de una asociación de criadores. La mayoría de los perros del mundo no pertenece a ninguna raza: son perros de pueblo o de la calle que se cruzan libremente (Shannon y colaboradores, 2015). Las razas son grupos que las personas separaron dentro de esa enorme variedad.</p>
         <h4>El estándar: el perro ideal escrito en papel</h4>
@@ -987,7 +997,7 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
           <li><strong>Esa esencia se hereda y no cambia.</strong></li>
         </ul>
         <h4>La primera señal de alarma</h4>
-        <p>Si las razas humanas fueran algo natural y evidente, quienes las clasificaron deberían haber coincidido en cuántas son. No coincidieron: las clasificaciones propusieron desde cuatro o cinco razas hasta más de veinte. Una categoría natural no cambia de número según quién la cuente.</p>
+        <p>Si las razas humanas fueran algo natural y evidente, quienes las clasificaron deberían haber coincidido en cuántas son. No coincidieron: las clasificaciones propusieron desde cuatro o cinco razas hasta más de veinte. Ese desacuerdo no prueba por sí solo que no haya diferencias genéticas entre poblaciones, pero muestra un problema del modelo tipológico: una categoría natural no debería cambiar de número según quién la cuente. Para saber qué dice la biología hacen falta datos genéticos.</p>
         <p>Con las razas de perros pasa algo parecido: los clubes de criadores tampoco coinciden en cuántas hay. En los dos casos, las clasificaciones las hacen personas que eligen qué rasgos mirar, y si se eligen otros rasgos se obtienen otros grupos. Por eso la pregunta de esta cápsula no es si se puede clasificar a los seres humanos (clasificar siempre se puede), sino si esa clasificación coincide con la forma en que está organizada la variación genética.</p>
       </div>
 
@@ -1006,14 +1016,14 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
 
       <div class="tarjeta-lectura">
         <h4>De la idea a las pruebas</h4>
-        <p>Para saber si existen razas humanas, la biología no se pregunta si las personas son distintas entre sí: lo son. Se pregunta si esas diferencias se organizan como en las razas de perros. Si las razas humanas existieran, tendríamos que encontrar cuatro cosas:</p>
+        <p>Para saber si existen razas humanas, la biología no se pregunta si las personas son distintas entre sí: lo son. Se pregunta si esas diferencias se organizan como en las razas de perros. Si las razas humanas existieran, tendríamos que encontrar cuatro cosas. Estas cuatro pruebas no son una definición universal de raza: son criterios elegidos para comparar con el ejemplo más claro de raza que conocemos, el de los perros de criadero.</p>
         <ul>
           <li><strong>Prueba 1:</strong> una parte grande de la variación genética, entre los grupos.</li>
           <li><strong>Prueba 2:</strong> rasgos que van juntos dentro de cada grupo.</li>
           <li><strong>Prueba 3:</strong> grupos cerrados, que se reproducen solo entre sí.</li>
           <li><strong>Prueba 4:</strong> grupos con bordes netos en los datos genéticos, en un número que no dependa de quien analiza.</li>
         </ul>
-        <p>En los perros de criadero, las cuatro pruebas se cumplen, pero no porque las razas sean naturales: se cumplen porque durante generaciones las personas controlaron qué perros se reproducían con cuáles. Las próximas cuatro carpetas ponen a prueba a la especie humana, en la que nunca hubo nada parecido.</p>
+        <p>En los perros de criadero, las cuatro pruebas se cumplen, pero no porque las razas sean naturales: se cumplen porque durante generaciones las personas controlaron qué perros se reproducían con cuáles. Las próximas cuatro carpetas ponen a prueba a la especie humana, en la que nunca existió un sistema de registros cerrados como el de los criaderos.</p>
       </div>
 
       <div class="tarjeta-actividad" data-act="a3_pred">
@@ -1064,13 +1074,13 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
             <li>el 8,3 %, entre poblaciones de un mismo continente;</li>
             <li>y solo el 6,3 %, entre grandes grupos continentales, que eran las supuestas "razas".</li>
           </ul>
-          <p>El resultado fue el inverso del que exige la idea de raza.</p>
+          <p>El resultado fue el inverso del que exige la idea de raza. Este dato, solo, no cierra la discusión: aunque la mayor parte de la variación esté dentro de las poblaciones, combinando muchos marcadores se pueden reconocer diferencias entre poblaciones. En la carpeta 7 aparece por qué eso tampoco alcanza para hablar de razas.</p>
           <h4>Lo confirmó el ADN moderno</h4>
           <p>En 2002, el equipo de Rosenberg estudió 377 microsatélites en 52 poblaciones. Ubicó entre el 93 y el 95 % de la variación dentro de las poblaciones y solo entre el 3 y el 5 % entre grandes regiones del mundo.</p>
           <h4>Diferencias de frecuencia, no de tipo</h4>
-          <p>Las diferencias genéticas entre poblaciones humanas son diferencias de frecuencia. Un alelo puede ser frecuente en una población y raro en otra, pero casi nunca está en todas las personas de un lugar y en ninguna de otro. Por eso no hay un alelo que funcione como "marca" de un grupo, y con diferencias de grado no se pueden trazar límites.</p>
+          <p>Las diferencias genéticas entre poblaciones humanas son diferencias de frecuencia. Muchos alelos tienen frecuencias distintas en distintas poblaciones, y algunos difieren tanto que sirven para estimar de qué región vinieron los antepasados de una persona. Pero casi nunca un alelo está en todas las personas de un lugar y en ninguna de otro, y no existe un conjunto de alelos que divida limpiamente a la humanidad en pocos grupos.</p>
           <h4>Perros y personas, con la misma herramienta</h4>
-          <p>Rosenberg en humanos y Parker en perros usaron el mismo tipo de marcador, los microsatélites, así que se pueden comparar. En los perros, alrededor del 30 % de la variación está entre razas; en los humanos, entre el 3 y el 5 % está entre grandes regiones.</p>
+          <p>Rosenberg en humanos y Parker en perros usaron el mismo tipo de marcador, los microsatélites, así que se pueden comparar de manera aproximada. Los dos estudios usaron muestras y diseños distintos, por lo que importa la diferencia de tamaño entre las cifras más que el número exacto. En los perros, alrededor del 30 % de la variación está entre razas; en los humanos, entre el 3 y el 5 % está entre grandes regiones.</p>
         </div>
 
         <div class="interactivo" id="inter-4a">
@@ -1190,7 +1200,7 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
 
       <div class="tarjeta-lectura">
         <h4>Parecidos que no son parentesco</h4>
-        <p>Como el color sigue a la radiación del lugar y no al parentesco, pueblos que viven a una latitud parecida pueden tener pigmentaciones parecidas sin estar especialmente emparentados. Hay pieles oscuras en África, en el sur de la India, en Melanesia y en Australia; sin embargo, los melanesios están genéticamente más cerca de los asiáticos del este que de los africanos. A la vez, la piel clara surgió por separado en Europa y en Asia oriental, con alelos distintos. La aparición de rasgos parecidos en grupos distintos por presiones de selección parecidas se llama <span class="termino">evolución convergente</span>.</p>
+        <p>El color de la piel depende de muchos genes. Su distribución en el mundo refleja en buena parte la adaptación a distintos niveles de radiación ultravioleta, aunque también la historia de cada población. Por eso, pueblos que viven a una latitud parecida pueden tener pigmentaciones parecidas sin estar especialmente emparentados. Hay pieles oscuras en África, en el sur de la India, en Melanesia y en Australia; sin embargo, si se compara el conjunto de su ADN, las poblaciones de Melanesia están más cerca de las de Asia oriental que de las africanas. A la vez, la piel clara surgió en buena parte por separado en Europa y en Asia oriental, con variantes genéticas en parte distintas. La aparición de rasgos parecidos en grupos distintos por presiones de selección parecidas se llama <span class="termino">evolución convergente</span>. Por eso, parecerse en un rasgo no permite deducir cuán emparentadas están dos poblaciones.</p>
         <h4>Los otros dos rasgos del juego</h4>
         <p>La <span class="termino">persistencia de la lactasa</span> es la capacidad de seguir digiriendo la leche en la adultez. Es más frecuente en poblaciones con una larga historia de cría de animales lecheros, y surgió por separado en Europa y en el este de África, con alelos distintos (Tishkoff y colaboradores, 2007). El alelo de la <span class="termino">anemia falciforme</span> es más frecuente donde hubo malaria, porque las personas con una sola copia del alelo resisten mejor las formas graves de esa enfermedad; aparece en África, en el Mediterráneo, en Medio Oriente y en la India. Ninguno de estos alelos es "de" un grupo: cada uno es frecuente en unos lugares y raro en otros, y cada rasgo dibuja un mapa distinto.</p>
         <h4>Por qué el aspecto engaña</h4>
@@ -1235,9 +1245,9 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
       <div class="tarjeta-lectura">
         <h4>Una medida de diferenciación</h4>
         <p>Para comparar cuánto se diferenciaron las poblaciones de una especie, la biología usa un número llamado <span class="termino">FST</span>, que va de 0 a 1 e indica qué parte de la variación genética se debe a diferencias entre poblaciones. Si vale 0, las poblaciones tienen los mismos alelos en las mismas proporciones; si vale 1, no comparten ninguno.</p>
-        <p>En la especie humana, el FST ronda 0,15. Es el mismo dato de la carpeta anterior visto desde el otro lado: si el 85 % de la variación está dentro de las poblaciones, el 15 % restante es lo que las diferencia.</p>
-        <h4>El umbral de las subespecies</h4>
-        <p>En zoología, una <span class="termino">subespecie</span> es un grupo dentro de una especie que se diferenció lo suficiente, en general por aislamiento geográfico, como para reconocerlo en la clasificación. En otros mamíferos, para reconocer subespecies suele pedirse un FST cercano a 0,25 o mayor (Templeton, 1998). Con el mismo criterio que se usa para el resto de los animales, la especie humana no tiene subespecies.</p>
+        <p>En la especie humana, el FST ronda 0,15. Es, en forma aproximada, el mismo dato de la carpeta anterior visto desde el otro lado: si cerca del 85 % de la variación está dentro de las poblaciones, alrededor del 15 % es lo que las diferencia. Los valores exactos cambian según los marcadores y las poblaciones que se comparen.</p>
+        <h4>Una referencia para las subespecies</h4>
+        <p>En zoología, una <span class="termino">subespecie</span> es un grupo dentro de una especie que se diferenció lo suficiente, en general por aislamiento geográfico, como para reconocerlo en la clasificación. No hay un valor de FST que decida por sí solo si un grupo es una subespecie: los zoólogos también tienen en cuenta la historia evolutiva, el aislamiento y otros rasgos. Como referencia, el genetista Alan Templeton (1998) señaló que, en otros mamíferos grandes, los grupos reconocidos como subespecies suelen tener un FST cercano a 0,25 o mayor. Con esa referencia, la diferenciación humana queda claramente por debajo.</p>
       </div>
 
       <div class="interactivo" id="inter-6a">
@@ -1255,9 +1265,9 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
         <h4>Por qué somos tan parecidos</h4>
         <p><em>Homo sapiens</em> se originó en África hace unos 300 000 años (Hublin y colaboradores, 2017) y salió de ese continente hace algunas decenas de miles de años. En ese recorrido atravesó <span class="termino">cuellos de botella</span>, que son reducciones bruscas del tamaño de una población que achican su diversidad genética. Por eso somos una especie joven y genéticamente bastante pareja. Los chimpancés, aunque son muchísimos menos individuos que nosotros, tienen más diversidad genética: sus linajes son mucho más distintos entre sí.</p>
         <h4>Un árbol que en realidad es una red</h4>
-        <p>Para que hubiera razas cerradas, las poblaciones humanas tendrían que haberse separado como las ramas de un árbol, sin volver a tocarse. Pero las poblaciones humanas no evolucionaron aisladas. Durante unos 100 000 años de migraciones, las personas se movieron y se cruzaron con las de otros grupos con frecuencia, y los continentes no funcionaron como barreras cerradas. Alcanza con algunos migrantes por generación para que los grupos no se separen del todo. La historia humana se parece más a una red que a un árbol: las poblaciones se separan, se cruzan y vuelven a mezclarse.</p>
+        <p>Para que hubiera razas cerradas, las poblaciones humanas tendrían que haberse separado como las ramas de un árbol, sin volver a tocarse. Pero las poblaciones humanas no evolucionaron aisladas. Durante unos 100 000 años de migraciones, las personas se movieron y se cruzaron con las de otros grupos con frecuencia, y los continentes no funcionaron como barreras cerradas. Hubo poblaciones que estuvieron bastante aisladas durante mucho tiempo, como algunas de islas o de valles lejanos, y comunidades con mucha <span class="termino">endogamia</span>, es decir, en las que las parejas se forman casi siempre dentro del mismo grupo. Pero esos aislamientos fueron parciales o locales, y ninguno dividió a la humanidad en unos pocos grupos cerrados. Alcanza con algunos migrantes por generación para que los grupos no se separen del todo. La historia humana se parece más a una red que a un árbol: las poblaciones se separan, se cruzan y vuelven a mezclarse.</p>
         <h4>La diferencia con los perros</h4>
-        <p>Las razas de criadero cumplen esta prueba porque las personas mantienen sus registros cerrados. En la especie humana nadie cerró nunca un registro: el flujo génico fue la regla.</p>
+        <p>Las razas de criadero cumplen esta prueba porque las personas mantienen sus registros cerrados. En la especie humana nunca existió un sistema de registros cerrados como el de los criaderos: aun con aislamientos locales, el flujo génico entre poblaciones fue frecuente.</p>
       </div>
 
       <div class="interactivo" id="inter-6b">
@@ -1275,7 +1285,7 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
 
       <div class="tarjeta-actividad" data-act="a6_1">
         <div class="act-head"><span class="act-tag">Actividad 6.1</span><span class="act-ico" aria-hidden="true" data-ico="lapiz"></span></div>
-        <p class="consigna">En una especie de mamífero, el FST entre las poblaciones de dos regiones vale 0,31. En la especie humana, entre grandes regiones del mundo, ronda 0,15. Con el criterio que usan los zoólogos, ¿qué se puede concluir?</p>
+        <p class="consigna">En una especie de mamífero, el FST entre las poblaciones de dos regiones vale 0,31. En la especie humana, entre grandes regiones del mundo, ronda 0,15. Usando la referencia de Templeton, ¿qué se puede concluir?</p>
         <div class="opciones" data-mc="a6_1">
           <button type="button" class="opcion" data-ok="1"><span class="letra">a)</span><span>Que ese mamífero podría tener subespecies, y que los grupos humanos no alcanzan ese grado de diferenciación.</span></button>
           <button type="button" class="opcion" data-ok="0"><span class="letra">b)</span><span>Que ambas especies tienen subespecies, porque cualquier valor de FST mayor que cero indica grupos separados.</span></button>
@@ -1290,7 +1300,7 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
         <div class="act-head"><span class="act-tag">Actividad 6.2: ¿cuánta mezcla hace falta?</span><span class="act-ico" aria-hidden="true" data-ico="lapiz"></span></div>
         <div class="sim-situacion">
           <p>Imaginen cuatro pueblos separados por montañas. Si nadie cruza, con el tiempo cada pueblo se va diferenciando de los otros y podrían llegar a ser subespecies. Pero ¿qué pasa si algunas personas sí cruzan, forman pareja y tienen hijos en otro pueblo? ¿Cuántas hacen falta para que los pueblos <strong>no</strong> se separen?</p>
-          <p class="sim-recuerdo">Recuerden: el FST mide qué tan distintas son las poblaciones (0 = iguales; 1 = totalmente distintas). Para hablar de subespecies hace falta un FST de 0,25 o más.</p>
+          <p class="sim-recuerdo">Recuerden: el FST mide qué tan distintas son las poblaciones (0 = iguales; 1 = totalmente distintas). Como referencia, en otros mamíferos los grupos reconocidos como subespecies suelen tener un FST de 0,25 o más.</p>
         </div>
         <p class="paso-tit">Paso 1. Antes de usar el simulador, anticipen: ¿cuántos migrantes por generación hacen falta para que el FST quede por debajo de 0,25?</p>
         <div class="vf-botones pred-mig" id="pred-mig" role="group" aria-label="Predicción de migrantes">
@@ -1302,8 +1312,9 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
             <label for="mig-slider">Migrantes que llegan a cada pueblo por generación: <span class="k-valor" id="mig-num">0</span></label>
             <input type="range" id="mig-slider" min="0" max="5" step="0.25" value="0" aria-label="Migrantes por generación, de 0 a 5">
             <div class="fst-lectura">FST = <span id="mig-fst">1,00</span></div>
-            <div class="mig-barra"><div class="mig-relleno" id="mig-relleno"></div><span class="mig-umbral" style="left:25%;">0,25 · umbral de subespecie</span><span class="mig-umbral abajo" style="left:15%;">0,15 · especie humana</span></div>
+            <div class="mig-barra"><div class="mig-relleno" id="mig-relleno"></div><span class="mig-umbral" style="left:25%;">0,25 · referencia de subespecie</span><span class="mig-umbral abajo" style="left:15%;">0,15 · especie humana</span></div>
             <div class="mig-escala"><span>0 · iguales</span><span>1 · totalmente distintas</span></div>
+            <p class="aviso-ficcion">Es un modelo simplificado: supone muchas generaciones y poblaciones que intercambian migrantes siempre del mismo modo. Sirve para ver que una mezcla pequeña reduce mucho la diferenciación, pero no predice el FST de poblaciones reales.</p>
             <p class="inter-texto" id="mig-texto" aria-live="polite"></p>
           </div>
           <p class="paso-tit">Paso 3. Escriban el número de migrantes en el que frenaron.</p>
@@ -1337,7 +1348,7 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
 
       <div class="tarjeta-lectura">
         <h4>Un programa que arma grupos</h4>
-        <p>Hoy existen programas de computadora que comparan el ADN de muchas personas y las agrupan solos, sin que nadie les diga de dónde es cada una. Para cada persona, el programa calcula qué parte de su ADN se parece a cada grupo. Por eso una persona puede quedar, por ejemplo, 70 % en un grupo y 30 % en otro.</p>
+        <p>Hoy existen programas de computadora que comparan el ADN de muchas personas y las agrupan solos, sin que nadie les diga de dónde es cada una. Para cada persona, el programa calcula qué parte de su ADN se parece a cada grupo. Por eso una persona puede quedar, por ejemplo, 70 % en un grupo y 30 % en otro. Esas proporciones no son una medida directa de la naturaleza: dependen de qué poblaciones se usaron como referencia y de cuántos grupos se le pidió al programa.</p>
         <h4>Una objeción: "los test de ADN adivinan de dónde sos"</h4>
         <p>Es cierto que, mirando muchas partes del ADN a la vez, se puede estimar de qué región del mundo vinieron los antepasados de una persona: las diferencias genéticas siguen a la geografía. Pero eso funciona a cualquier escala. Con suficiente información también se distinguen pueblos de países vecinos y hasta de valles cercanos. Si poder distinguir alcanzara para hablar de razas, habría tantas razas como pueblos. La pregunta de la Prueba 4 es otra: si esas diferencias forman pocos grupos con bordes netos.</p>
         <h4>Quien elige el número es el investigador</h4>
@@ -1413,7 +1424,7 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
 
       <div class="tarjeta-lectura">
         <h4>Una conclusión equivocada que hay que evitar</h4>
-        <p>Que no existan razas humanas no significa que todas las personas sean genéticamente iguales. Las diferencias genéticas entre personas existen y se pueden medir. Lo que la biología rechaza es que se organicen en pocos grupos con límites claros.</p>
+        <p>Que no existan razas humanas no significa que todas las personas sean genéticamente iguales. Las diferencias genéticas entre personas existen y se pueden medir. Las poblaciones humanas también tienen estructura genética: se pueden reconocer diferencias entre ellas y estimar de qué región vinieron los antepasados de alguien. Lo que la biología rechaza es que esa estructura se organice en pocos grupos discretos, homogéneos y con límites claros, como suponían las razas.</p>
         <h4>Adaptaciones locales</h4>
         <p>Algunas poblaciones tienen alelos que las adaptan a su ambiente. Los habitantes de los Andes muestran adaptaciones genéticas a la vida en altura. La población de San Antonio de los Cobres, en la Puna salteña, presenta alelos asociados a una mayor capacidad para metabolizar el arsénico presente en el agua (Schlebusch y colaboradores, 2015). Son adaptaciones de poblaciones concretas a ambientes concretos, que afectan a pocos genes y que no comparten todos los pueblos originarios americanos.</p>
       </div>
@@ -1424,7 +1435,7 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
         <h4>Muchos mapas, ninguna raza</h4>
         <p>Si se agrupara a las personas por cada adaptación, aparecería un grupo distinto para cada ambiente: uno por la radiación del sol, otro por la altura, otro por el arsénico del agua. Esos grupos son muchos, son locales y se superponen de manera distinta para cada rasgo. Por eso la variación humana es real, pero se organiza rasgo por rasgo y lugar por lugar, no en razas.</p>
         <h4>Lo que la comparación con los perros no dice</h4>
-        <p>Comparar con los perros no convierte a la raza en una categoría natural. Las razas de perros son un producto de la cría dirigida: existen porque las personas eligieron rasgos y, además, controlaron durante generaciones quién se reproducía con quién. Fuera de los criaderos, la variación entre los perros es continua. En la historia humana no hubo nada parecido a un registro cerrado; por eso la variación humana es continua y no forma razas.</p>
+        <p>Comparar con los perros no convierte a la raza en una categoría natural. Las razas de perros son un producto de la cría dirigida: existen porque las personas eligieron rasgos y, además, controlaron durante generaciones quién se reproducía con quién. Fuera de los criaderos, la variación entre los perros es continua. En la historia humana hubo poblaciones más o menos aisladas, pero nunca un sistema de registros cerrados que dividiera a la especie en pocos grupos. La migración, la mezcla, la selección natural y el azar dieron una variación real, con estructura geográfica, que cambia de manera gradual y no forma razas.</p>
       </div>
 
       <div class="tarjeta-actividad" data-act="a8_1">
@@ -1500,13 +1511,13 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
             <tr><td>Afirmación</td><td>Responde la pregunta con claridad y precisión.</td><td>Responde, pero de forma ambigua.</td><td>No responde la pregunta.</td></tr>
             <tr><td>Evidencias</td><td>Elige dos notas de pruebas distintas que contienen datos correctos.</td><td>Las notas son correctas pero no tienen datos.</td><td>Las notas tienen errores o no se relacionan con la pregunta.</td></tr>
             <tr><td>Justificación</td><td>Explica cómo cada evidencia elegida apoya la afirmación.</td><td>Conecta parcialmente evidencias y afirmación.</td><td>Repite las evidencias sin explicar.</td></tr>
-            <tr><td>Refutación</td><td>Explica que las razas de perros existen solo porque las personas cerraron la reproducción durante generaciones, y que en la especie humana eso nunca ocurrió.</td><td>Menciona una diferencia con los perros sin explicar por qué produce razas.</td><td>No responde al argumento de los perros.</td></tr>
+            <tr><td>Refutación</td><td>Explica que las razas de perros existen porque las personas cerraron la reproducción durante generaciones, y que en la especie humana nunca hubo un sistema así.</td><td>Menciona una diferencia con los perros sin explicar por qué produce razas.</td><td>No responde al argumento de los perros.</td></tr>
             <tr><td>Precisión</td><td>Reconoce que la variación humana existe aunque no forme razas.</td><td>Lo sugiere de forma confusa.</td><td>Concluye que todas las personas son genéticamente iguales.</td></tr>
           </table>
         </details>
 
         <p class="aviso-ficcion">Al terminar la evaluación van a poder imprimir o guardar en PDF una hoja con todas sus respuestas.</p>
-        <div class="clave-docente"><span class="clave-tit">Respuesta modelo</span>Tomás no tiene razón: que haya razas de perros no significa que haya razas humanas. Entre el 93 y el 95 % de la variación genética humana está dentro de las poblaciones y solo entre el 3 y el 5 % entre grandes regiones, mientras que entre los perros de criadero alrededor del 30 % está entre razas. Además, los rasgos humanos no van juntos: el color de piel sigue a la radiación del sol, y la persistencia de la lactasa o el alelo falciforme siguen otros mapas. Pero las razas de perros tampoco son naturales: son grupos que las personas definieron por genealogía y mantuvieron separados con registros cerrados y selección artificial. Por eso un mestizo no es un término medio entre razas, sino un perro que queda fuera de ellas. En la especie humana nadie cerró nunca un registro y el flujo génico fue constante: la variación es real, pero continua, y no forma razas.</div>
+        <div class="clave-docente"><span class="clave-tit">Respuesta modelo</span>Tomás no tiene razón: que haya razas de perros no significa que haya razas humanas. Entre el 93 y el 95 % de la variación genética humana está dentro de las poblaciones y solo entre el 3 y el 5 % entre grandes regiones, mientras que entre los perros de criadero alrededor del 30 % está entre razas. Además, los rasgos humanos no van juntos: el color de piel sigue a la radiación del sol, y la persistencia de la lactasa o el alelo falciforme siguen otros mapas. Pero las razas de perros tampoco son naturales: son grupos que las personas definieron por genealogía y mantuvieron separados con registros cerrados y selección artificial. Por eso un mestizo no es un término medio entre razas, sino un perro que queda fuera de ellas. En la especie humana nunca hubo un sistema de registros cerrados y, aun con aislamientos locales, el flujo génico fue frecuente: la variación es real y tiene estructura geográfica, pero es gradual y no forma razas.</div>
       </div>
 
       <div class="pie-carpeta">
@@ -1573,9 +1584,9 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
           <button type="button" class="opcion" data-ok="0"><span class="letra">a)</span><span>Que el ratón tiene menos variación genética total que la especie humana, porque es un animal más chico.</span></button>
           <button type="button" class="opcion" data-ok="0"><span class="letra">b)</span><span>Que las dos especies están igual de diferenciadas, porque ambos valores quedan por debajo de 0,5.</span></button>
           <button type="button" class="opcion" data-ok="0"><span class="letra">c)</span><span>Que los humanos están más diferenciados, porque ocupan más continentes que el ratón salares.</span></button>
-          <button type="button" class="opcion" data-ok="1"><span class="letra">d)</span><span>Que el ratón está más diferenciado y supera el umbral que suele pedirse para subespecies.</span></button>
+          <button type="button" class="opcion" data-ok="1"><span class="letra">d)</span><span>Que el ratón está más diferenciado y supera la referencia que suele usarse para subespecies.</span></button>
         </div>
-        <div class="explicacion" style="display:none;">0,32 es más del doble de 0,15 y supera el umbral de alrededor de 0,25 que suele pedirse en mamíferos. El FST mide diferenciación entre poblaciones, no la variación total ni la extensión del territorio.</div>
+        <div class="explicacion" style="display:none;">0,32 es más del doble de 0,15 y supera la referencia orientativa de alrededor de 0,25 que suele usarse en mamíferos. El FST mide diferenciación entre poblaciones, no la variación total ni la extensión del territorio.</div>
       </div>
 
       <div class="tarjeta-actividad" data-act="p4">
@@ -1615,7 +1626,7 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
         <p class="consigna">Un compañero dice: "Entre un chihuahua y un gran danés hay perros de todos los tamaños. Si la variación es continua, en los perros tampoco hay razas". Respóndanle explicando en qué tiene razón, en qué no y qué diferencia hay con la especie humana.</p>
         <div class="campo"><textarea id="ta-p7" data-min="120" data-ans="p7"></textarea><div class="contador">0 / 120 caracteres mínimos</div></div>
         <div class="fb" id="fb-p7"></div>
-        <div class="clave-docente"><span class="clave-tit">Respuesta esperada</span>Tiene razón en que, entre todos los perros, la variación es continua y en que las razas no son una categoría natural. Pero una raza de criadero no se define por el tamaño ni por el aspecto, sino por la genealogía: es un grupo que las personas mantienen cerrado con un registro, y por eso su ADN se diferenció de los demás. Los perros intermedios quedan fuera de las razas, no en el medio. En la especie humana nunca hubo registros cerrados, sino flujo génico frecuente; por eso no se formaron razas.</div>
+        <div class="clave-docente"><span class="clave-tit">Respuesta esperada</span>Tiene razón en que, entre todos los perros, la variación es continua y en que las razas no son una categoría natural. Pero una raza de criadero no se define por el tamaño ni por el aspecto, sino por la genealogía: es un grupo que las personas mantienen cerrado con un registro, y por eso su ADN se diferenció de los demás. Los perros intermedios quedan fuera de las razas, no en el medio. En la especie humana nunca hubo un sistema de registros cerrados como el de los criaderos y el flujo génico fue frecuente; por eso no se formaron razas.</div>
       </div>
 
       <div class="resumen-final" id="resumen-final" style="display:none;">
@@ -1994,7 +2005,7 @@ function initTextareas(){
 var PISTAS_MC = {
   a4_2:"Revisen la sección \"Lo que encontró Lewontin\" y la de \"Diferencias de frecuencia, no de tipo\".",
   a5_1:"Revisen la sección \"Parecidos que no son parentesco\".",
-  a6_1:"Ubiquen los dos valores en la regla del FST y compárenlos con el umbral.",
+  a6_1:"Ubiquen los dos valores en la regla del FST y compárenlos con la referencia.",
   a7_1:"Muevan el control de K en el modelo humano y miren las barras del centro."
 };
 function initMC(){
@@ -2456,9 +2467,9 @@ function initMigrantes(){
     $("mig-num").textContent=ms; $("mig-fst").textContent=fs;
     $("mig-relleno").style.width=(f*100)+"%";
     $("mig-relleno").classList.toggle("bajo",f<0.25);
-    $("mig-texto").textContent = m===0 ? "Nadie cruza: el FST llega a 1 y los pueblos terminan totalmente separados."
-      : f>=0.25 ? "Con "+ms+" migrantes por generación, el FST es "+fs+": los pueblos todavía se diferencian como subespecies."
-      : "Con "+ms+" migrantes por generación, el FST es "+fs+": los pueblos ya no llegan a separarse como subespecies.";
+    $("mig-texto").textContent = m===0 ? "Nadie cruza: con muchas generaciones, el FST tiende a 1 y los pueblos terminan totalmente separados."
+      : f>=0.25 ? "Con "+ms+" migrantes por generación, el FST es "+fs+": los pueblos todavía quedan tan diferenciados como suelen estarlo las subespecies."
+      : "Con "+ms+" migrantes por generación, el FST es "+fs+": los pueblos ya no llegan a la diferenciación que se toma como referencia de subespecie.";
   }
   sl.addEventListener("input",pintar); pintar();
   if(state.done.a6_2){ $("num-6-2").value="1"; fbOk("fb-6-2","Correcto: alcanza con un migrante por generación."); }
@@ -2469,7 +2480,7 @@ function initMigrantes(){
     if(v===1){
       state.resp.a6_2="1";
       var pr=state.inter.pred62, extra = pr==="1" ? " Lo habían anticipado." : " Habían anticipado "+PN[pr]+": hace falta mucho menos.";
-      fbOk("fb-6-2","Correcto: alcanza con 1 migrante por generación para que los pueblos no se separen como subespecies."+extra+" En la historia humana, el ir y venir de personas entre poblaciones fue muchísimo mayor: por eso nunca se formaron grupos cerrados.");
+      fbOk("fb-6-2","Correcto: en este modelo, alcanza con 1 migrante por generación para que los pueblos no lleguen a la diferenciación que se toma como referencia de subespecie."+extra+" En la historia humana, el movimiento de personas entre poblaciones fue en general mucho mayor que eso: por eso la especie nunca quedó dividida en grupos cerrados.");
       marcarDone("a6_2");
     } else {
       sumarError("a6_2");
@@ -2547,9 +2558,9 @@ function initBarras(){
 
 /* ---------- 6.A regla ---------- */
 var TXT_FST={
-  h:"Especie humana: FST ≈ 0,15. Es el 15 % de la variación que, en el reparto de Lewontin, no estaba dentro de las poblaciones (8,3 % + 6,3 %). Queda por debajo del umbral de subespecie.",
-  u:"Umbral que suele pedirse para reconocer subespecies en mamíferos: un FST cercano a 0,25 o mayor (Templeton, 1998).",
-  p:"Perros de criadero: alrededor de 0,3. Es el 30 % de la variación entre razas que midieron Parker y colaboradores con una medida del mismo tipo. Supera el umbral, como era de esperar en grupos cerrados."
+  h:"Especie humana: FST ≈ 0,15. Equivale aproximadamente al 15 % de la variación que, en el reparto de Lewontin, no estaba dentro de las poblaciones (8,3 % + 6,3 %). Queda por debajo de la referencia de subespecie.",
+  u:"Referencia orientativa para subespecies en mamíferos grandes: un FST cercano a 0,25 o mayor (Templeton, 1998). No es una regla fija: los zoólogos también miran otros criterios.",
+  p:"Perros de criadero: alrededor de 0,3. Es el 30 % de la variación entre razas que midieron Parker y colaboradores con una medida del mismo tipo. Supera la referencia, como era de esperar en grupos cerrados."
 };
 function initRegla(){
   if(!state.inter.fst) state.inter.fst={};
