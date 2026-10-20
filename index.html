@@ -2877,9 +2877,9 @@ function puntajeVoz(v){
   if(l.indexOf("es-mx")===0) s+=100;
   else if(l.indexOf("es-419")===0||l.indexOf("es-us")===0||l.indexOf("es-la")===0) s+=60;
   else if(/^es-(ar|bo|cl|co|cr|cu|do|ec|gt|hn|ni|pa|pe|pr|py|sv|uy|ve)\b/.test(l)) s+=40;
-  if(/mexic|dalia|sabina|jorge|beatriz|libia|marisol|gerardo|camila|valeria|ximena|regina|lucero|paulina|mariana/.test(n)) s+=50;
+  if(/mexic|dalia|sabina|jorge|raul|juan|beatriz|libia|marisol|gerardo|camila|valeria|ximena|regina|lucero|paulina|mariana|monica|angelica/.test(n)) s+=50;
   if(/latino|latin/.test(n)) s+=20;
-  if(/natural|neural|online|premium|enhanced|hd|siri/.test(n)) s+=15;
+  if(/natural|neural|online|premium|enhanced|hd|siri|google/.test(n)) s+=15;
   if(v.localService===false) s+=3;
   return s;
 }
@@ -2922,6 +2922,7 @@ function textoDeLaTarjeta(card){
 }
 function hablarCard(card,b){
   var txt=textoDeLaTarjeta(card); if(!txt) return;
+  elegirVoz();
   var frag=txt.match(/[^.!?;:…]+[.!?;:…"”»)\]]*\s*/g)||[txt];
   var chunks=[], acc="";
   for(var i=0;i<frag.length;i++){ acc+=frag[i]; if(acc.length>90){ chunks.push(acc); acc=""; } }
