@@ -1930,6 +1930,16 @@ document.addEventListener("paste",function(e){
   if(t && (t.tagName==="TEXTAREA"||t.tagName==="INPUT"||t.isContentEditable)) e.preventDefault();
 });
 
+/* ---------- Reinicio si minimiza o cambia de ventana ---------- */
+function reiniciarPorSalida(){
+  if(modoDocente) return;
+  if(document.body.classList.contains("imprimiendo")) return;
+  try{ localStorage.removeItem(LS_KEY); }catch(e){}
+  location.reload();
+}
+document.addEventListener("visibilitychange",function(){ if(document.hidden) reiniciarPorSalida(); });
+window.addEventListener("blur",reiniciarPorSalida);
+
 /* ---------- Tema ---------- */
 function aplicarTema(){
   if(state.tema==="claro"){ document.body.classList.add("tema-claro"); $("btn-tema").textContent="Modo oscuro"; }
