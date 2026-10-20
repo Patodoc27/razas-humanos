@@ -317,6 +317,13 @@ body.tema-claro .slot-img .slot-prompt{background:#fff;color:#211C4D;}
   .dialogo-fila{flex-direction:column;gap:14px;}
   .dialogo-fila .slot-img{flex:none;align-self:center;}
 }
+.img-fila{display:flex;gap:20px;align-items:stretch;margin:16px 0;}
+.img-fila .tarjeta-lectura{flex:1 1 auto;min-width:0;margin-top:0;}
+.img-fila .slot-img{flex:0 0 290px;margin:0;align-self:flex-start;}
+@media (max-width:900px){
+  .img-fila{flex-direction:column-reverse;gap:14px;}
+  .img-fila .slot-img{flex:none;align-self:center;}
+}
 
 /* ---------- Clasificar (drag & drop) ---------- */
 .sortable .pool,.sortable .caja{
@@ -923,6 +930,7 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
     <div class="carpeta-cuerpo">
       <div class="carpeta-encabezado"><span class="carpeta-num">Carpeta N° 2</span><h2 class="carpeta-titulo" id="tit-2">¿Qué hace que un perro sea "de raza"?</h2></div>
 
+      <div class="img-fila">
       <div class="tarjeta-lectura">
         <h4>Una sola especie</h4>
         <p>Un chihuahua y un gran danés pertenecen a la misma especie. En los animales que se reproducen sexualmente, una de las definiciones más usadas dice que una <span class="termino">especie</span> es un grupo de seres vivos que pueden cruzarse entre sí y tener crías que, a su vez, también pueden tener crías. Entonces, ¿qué hace que sean razas distintas?</p>
@@ -933,8 +941,8 @@ body.tema-claro .tarjeta-reflexion{border-color:#CA8A04;}
         <h4>El registro cerrado</h4>
         <p>En general, un criadero inscribe a un perro como "de raza" solo si su madre y su padre ya estaban inscriptos en esa misma raza. Ese registro de parentesco se llama <span class="termino">pedigrí</span>, y está cerrado: no entra nadie de afuera. Así, durante generaciones, los perros de una raza se reproducen solo con perros de la misma raza. A esto se lo llama <span class="termino">cierre reproductivo</span>: un grupo que se reproduce solo dentro de sí mismo porque algo impide que entren individuos de afuera. No hay que confundirlo con el aislamiento que separa a dos especies distintas: dos perros de razas diferentes pueden tener crías fértiles. Lo que mantiene separadas a las razas es el registro que llevan las personas, no una barrera biológica.</p>
       </div>
-
       <figure class="slot-img" data-slot="IMG-03" data-ratio="3/4"><div class="slot-media"></div><figcaption class="slot-cap"></figcaption></figure>
+      </div>
 
       <div class="tarjeta-lectura">
         <h4>La selección artificial</h4>
